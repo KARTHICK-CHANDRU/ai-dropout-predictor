@@ -1,7 +1,11 @@
+# app.py-oda top-la irukkura imports-ai ipdi check pannunga
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from fpdf import FPDF
+try:
+    from fpdf import FPDF
+except ImportError:
+    st.error("FPDF library missing. Please add 'fpdf' to your requirements.txt")
 
 st.set_page_config(page_title="AI Dropout Predictor", layout="wide")
 
